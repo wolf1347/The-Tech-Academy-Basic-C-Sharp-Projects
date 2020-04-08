@@ -30,13 +30,13 @@ class Assignment3
 		Console.ReadLine();
 
 		//Has the user check if a number is greater than
+		
 		Console.WriteLine("Please input a number to see if it is greater than 50");
 		int programNumber = 50;
 		int userNumber = Convert.ToInt32(Console.ReadLine()); ;
-		bool GreaterThan = programNumber > userNumber;
-		if (programNumber > userNumber)
+		bool GreaterThan = userNumber > programNumber;
+		if (userNumber > programNumber)
 		{
-
 			Console.WriteLine("50 is > than " + userNumber + " so the boolean returned is " + GreaterThan);
 			Console.ReadLine();
 		}
