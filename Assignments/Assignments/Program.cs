@@ -11,7 +11,7 @@ namespace Assignments
         static void Main(string[] args)
         {
 
-            ////************ assignment page 101 commented out ************//
+            ////************ assignment page 101 COMMENTED OUT ************//
 
             //Console.WriteLine("What is your age?"); // ask the user age
             //int personAge = Convert.ToInt32(Console.ReadLine()); // assign the user input to personAge
@@ -33,7 +33,7 @@ namespace Assignments
 
             //Console.ReadLine();
 
-            ////************ assignment page 123 commented out ************//
+            ////************ assignment page 123 COMMENTED OUT ************//
 
             //Console.WriteLine("Welcome to Package Express. Please follow the instructions below."); // intro line
 
@@ -72,68 +72,99 @@ namespace Assignments
             //}
             //Console.ReadLine(); // Allows the console to keep the message displayed
 
-            ////************ assignment page 126 ************/////
+            ////************ assignment page 126 COMMENTED OUT ************/////
 
-            Console.WriteLine("What is your favorite animal?");
-            string animal = Console.ReadLine();
-            string validatedAnimal= animal.ToUpper(); // forces the user input to be all caps. Allows the user to enter cat CAT or Cat and still get bool of true
-            bool isGuessed = validatedAnimal == "DOG" || validatedAnimal == "DOGS"; // when the variable number is equal to DOG or DOGS bool will be true
+            //Console.WriteLine("What is your favorite animal?");
+            //string animal = Console.ReadLine();
+            //string validatedAnimal= animal.ToUpper(); // forces the user input to be all caps. Allows the user to enter cat CAT or Cat and still get bool of true
+            //bool isGuessed = validatedAnimal == "DOG" || validatedAnimal == "DOGS"; // when the variable number is equal to DOG or DOGS bool will be true
 
-            // The code as a while statement //
-            while (!isGuessed) // while isGuessed is false do the following
-            {
-                switch (validatedAnimal)    
-                {
-                    case "DOG": //if the user entry is dog
-                        Console.WriteLine("Dogs are my favorite too! Aren't they great?");
-                        isGuessed = true;
-                        break;
-                        
-                    case "DOGS": // if the user entry is dogs
-                        Console.WriteLine("Dogs are my favorite too! Aren't they great?");
-                        isGuessed = true;
-                        break;
+            //// The code as a while statement //
+            //while (!isGuessed) // while isGuessed is false do the following
+            //{
+            //    switch (validatedAnimal)    
+            //    {
+            //        case "DOG": //if the user entry is dog
+            //            Console.WriteLine("Dogs are my favorite too! Aren't they great?");
+            //            isGuessed = true;
+            //            break;
 
-                    default: // if none of the cases are correct this is the default
-                        Console.WriteLine(animal + "s are pretty great! But I think another animal is better.");
-                        Console.WriteLine("Do you have another favorite animal?");
-                        animal = Console.ReadLine(); // allows user to update animal to a different input
-                        validatedAnimal = animal.ToUpper(); // validates the new input to be uppercase
-                        break;
-                }
-            }
+            //        case "DOGS": // if the user entry is dogs
+            //            Console.WriteLine("Dogs are my favorite too! Aren't they great?");
+            //            isGuessed = true;
+            //            break;
+
+            //        default: // if none of the cases are correct this is the default
+            //            Console.WriteLine(animal + "s are pretty great! But I think another animal is better.");
+            //            Console.WriteLine("Do you have another favorite animal?");
+            //            animal = Console.ReadLine(); // allows user to update animal to a different input
+            //            validatedAnimal = animal.ToUpper(); // validates the new input to be uppercase
+            //            break;
+            //    }
+            //}
 
 
-            // The same code redone a do while statement //
+            //// The same code redone a do while statement //
 
-            do // ensures the loop happens at least once. 
-            {
+            //do // ensures the loop happens at least once. 
+            //{
 
-                switch (validatedAnimal)
-                {
-                    case "DOG":
-                        Console.WriteLine("Dogs are my favorite too! Aren't they great?");
-                        isGuessed = true;
-                        break;
+            //    switch (validatedAnimal)
+            //    {
+            //        case "DOG":
+            //            Console.WriteLine("Dogs are my favorite too! Aren't they great?");
+            //            isGuessed = true;
+            //            break;
 
-                    case "DOGS":
-                        Console.WriteLine("Dogs are my favorite too! Aren't they great?");
-                        isGuessed = true;
-                        break;
+            //        case "DOGS":
+            //            Console.WriteLine("Dogs are my favorite too! Aren't they great?");
+            //            isGuessed = true;
+            //            break;
 
-                    default: // if none of the cases are correct this is the default
-                        Console.WriteLine(animal + "s are pretty great! But I think another animal is better.");
-                        Console.WriteLine("Do you have another favorite animal?");
-                        animal = Console.ReadLine();
-                        validatedAnimal = animal.ToUpper();
-                        break;
-                }
+            //        default: // if none of the cases are correct this is the default
+            //            Console.WriteLine(animal + "s are pretty great! But I think another animal is better.");
+            //            Console.WriteLine("Do you have another favorite animal?");
+            //            animal = Console.ReadLine();
+            //            validatedAnimal = animal.ToUpper();
+            //            break;
+            //    }
 
-            }
-            while (!isGuessed);
+            //}
+            //while (!isGuessed);
+
+            //Console.ReadLine();
+
+            //************ assignment page 131************//
+
+            //Concatenate strings
+
+            //method 1 assigning the strings to a variable
+            string string1 = "I have a dog ";
+            string string2 = "his nme is Deku ";
+            string string3 = "and he is a Finnish Spitz.";
+
+            Console.WriteLine(string1 + string2 + string3);
+
+            //method 2 is just to add the strings together in the console.writeline without assigning them
+
+            Console.WriteLine("I also have a cat " + "his name is Jazz " + "and he is a Maine Coon");
+
+            // to uppercase
+
+            string1 = string1.ToUpper();
+            Console.WriteLine(string1);
+
+            //string builder
+
+            StringBuilder animals = new StringBuilder();
+            animals.Append("I have a dog "); //appends the string
+            Console.WriteLine(animals); // will write with only one line that has been added
+            animals.Append("his name is deku"); // appends the string
+            Console.WriteLine(animals); // will now write both lines that have been added
+            animals.Append(" and he is a finnish spitz."); // appends the string
+            Console.WriteLine(animals); // will now write 3 lines that have been added
 
             Console.ReadLine();
-
         }
     }
 }
