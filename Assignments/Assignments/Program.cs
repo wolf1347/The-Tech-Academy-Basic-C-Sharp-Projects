@@ -134,35 +134,91 @@ namespace Assignments
 
             //Console.ReadLine();
 
+            ////************ assignment page 131 COMMENTED OUT************//
+
+            ////Concatenate strings
+
+            ////method 1 assigning the strings to a variable
+            //string string1 = "I have a dog ";
+            //string string2 = "his nme is Deku ";
+            //string string3 = "and he is a Finnish Spitz.";
+
+            //Console.WriteLine(string1 + string2 + string3);
+
+            ////method 2 is just to add the strings together in the console.writeline without assigning them
+
+            //Console.WriteLine("I also have a cat " + "his name is Jazz " + "and he is a Maine Coon");
+
+            //// to uppercase
+
+            //string1 = string1.ToUpper();
+            //Console.WriteLine(string1);
+
+            ////string builder
+
+            //StringBuilder animals = new StringBuilder();
+            //animals.Append("I have a dog "); //appends the string
+            //Console.WriteLine(animals); // will write with only one line that has been added
+            //animals.Append("his name is deku"); // appends the string
+            //Console.WriteLine(animals); // will now write both lines that have been added
+            //animals.Append(" and he is a finnish spitz."); // appends the string
+            //Console.WriteLine(animals); // will now write 3 lines that have been added
+
+
             //************ assignment page 131************//
 
-            //Concatenate strings
+            // creating the string array
 
-            //method 1 assigning the strings to a variable
-            string string1 = "I have a dog ";
-            string string2 = "his nme is Deku ";
-            string string3 = "and he is a Finnish Spitz.";
+            string[] stringArray = { "cat", "dog", "bird", "hamster", "lizard", "snake", "fish" }; // create a string array 
 
-            Console.WriteLine(string1 + string2 + string3);
 
-            //method 2 is just to add the strings together in the console.writeline without assigning them
+            Console.WriteLine("Please select an index number from the string array starting with 0 and ending with 6"); // ask the user to make a selection
+            int stringSelection = Convert.ToInt32(Console.ReadLine()); // converts the selection from a string to an integer which allows it to be used in the print from the array
+            if (stringSelection <= 6) // if the user selection is 6 or less
+            {
+                Console.WriteLine(stringArray[stringSelection]); // it will print from the array 
+            }
+            else // otherwise
+            {
+                Console.WriteLine(stringSelection + " is not a valid selection."); // it tells the user it isn't a valid selection. 
+            }
 
-            Console.WriteLine("I also have a cat " + "his name is Jazz " + "and he is a Maine Coon");
+            //creating the int array
 
-            // to uppercase
+            int[] intArray = { 5, 10, 15, 20, 25 , 30, 35 }; // create an int array 
 
-            string1 = string1.ToUpper();
-            Console.WriteLine(string1);
+            Console.WriteLine("Please select an index number from the integer array starting with 0 and ending with 6"); // ask the user to make a selection
+            int intSelection = Convert.ToInt32(Console.ReadLine()); // converts the selection from a string to an integer which allows it to be used in the print from the array
 
-            //string builder
+            if (intSelection <= 6) // if the user selection is 6 or less
+            {
+                Console.WriteLine(intArray[intSelection]);  // it will print from the array 
+            }
+            else // otherwise
+            {
+                Console.WriteLine(intSelection + " is not a valid selection."); // it tells the user it isn't a valid selection. 
+            }
 
-            StringBuilder animals = new StringBuilder();
-            animals.Append("I have a dog "); //appends the string
-            Console.WriteLine(animals); // will write with only one line that has been added
-            animals.Append("his name is deku"); // appends the string
-            Console.WriteLine(animals); // will now write both lines that have been added
-            animals.Append(" and he is a finnish spitz."); // appends the string
-            Console.WriteLine(animals); // will now write 3 lines that have been added
+            // creating the string list
+
+            List<string> stringList = new List<string>(); // creates a string list
+            stringList.Add("pizza");
+            stringList.Add("macaroni and cheese");
+            stringList.Add("nachos");
+            stringList.Add("grilled cheese");
+            stringList.Add("ramen");
+
+            Console.WriteLine("Please select an index number from the string list starting with 0 and ending with 4"); // ask the user to make a selection
+            int stringListSelection = Convert.ToInt32(Console.ReadLine());
+
+            if (stringListSelection <= 4) // if the user selection is 4 or less
+            {
+                Console.WriteLine(stringList[stringListSelection]);  // it will print from the list 
+            }
+            else // otherwise
+            {
+                Console.WriteLine(stringListSelection + " is not a valid selection."); // it tells the user it isn't a valid selection. 
+            }
 
             Console.ReadLine();
         }
