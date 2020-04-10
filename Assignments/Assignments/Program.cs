@@ -165,62 +165,177 @@ namespace Assignments
             //Console.WriteLine(animals); // will now write 3 lines that have been added
 
 
-            //************ assignment page 136************//
+            ////************ assignment page 136 COMMENTED OUT************//
 
             // creating the string array
 
-            string[] stringArray = { "cat", "dog", "bird", "hamster", "lizard", "snake", "fish" }; // create a string array 
+            //string[] stringArray = { "cat", "dog", "bird", "hamster", "lizard", "snake", "fish" }; // create a string array 
 
 
-            Console.WriteLine("Please select an index number from the string array starting with 0 and ending with 6"); // ask the user to make a selection
-            int stringSelection = Convert.ToInt32(Console.ReadLine()); // converts the selection from a string to an integer which allows it to be used in the print from the array
-            if (stringSelection <= 6) // if the user selection is 6 or less
+            //Console.WriteLine("Please select an index number from the string array starting with 0 and ending with 6"); // ask the user to make a selection
+            //int stringSelection = Convert.ToInt32(Console.ReadLine()); // converts the selection from a string to an integer which allows it to be used in the print from the array
+            //if (stringSelection <= 6) // if the user selection is 6 or less
+            //{
+            //    Console.WriteLine(stringArray[stringSelection]); // it will print from the array 
+            //}
+            //else // otherwise
+            //{
+            //    Console.WriteLine(stringSelection + " is not a valid selection."); // it tells the user it isn't a valid selection. 
+            //}
+
+            ////creating the int array
+
+            //int[] intArray = { 5, 10, 15, 20, 25 , 30, 35 }; // create an int array 
+
+            //Console.WriteLine("Please select an index number from the integer array starting with 0 and ending with 6"); // ask the user to make a selection
+            //int intSelection = Convert.ToInt32(Console.ReadLine()); // converts the selection from a string to an integer which allows it to be used in the print from the array
+
+            //if (intSelection <= 6) // if the user selection is 6 or less
+            //{
+            //    Console.WriteLine(intArray[intSelection]);  // it will print from the array 
+            //}
+            //else // otherwise
+            //{
+            //    Console.WriteLine(intSelection + " is not a valid selection."); // it tells the user it isn't a valid selection. 
+            //}
+
+            //// creating the string list
+
+            //List<string> stringList = new List<string>(); // creates a string list
+            //stringList.Add("pizza");
+            //stringList.Add("macaroni and cheese");
+            //stringList.Add("nachos");
+            //stringList.Add("grilled cheese");
+            //stringList.Add("ramen");
+
+            //Console.WriteLine("Please select an index number from the string list starting with 0 and ending with 4"); // ask the user to make a selection
+            //int stringListSelection = Convert.ToInt32(Console.ReadLine());
+
+            //if (stringListSelection <= 4) // if the user selection is 4 or less
+            //{
+            //    Console.WriteLine(stringList[stringListSelection]);  // it will print from the list 
+            //}
+            //else // otherwise
+            //{
+            //    Console.WriteLine(stringListSelection + " is not a valid selection."); // it tells the user it isn't a valid selection. 
+            //}
+
+            //Console.ReadLine();
+
+            //************ assignment page 142************//
+
+            string[] bestVideoGames = { "Mass Effect 2", "Animal Crossing New Leaf", "Overwatch", "Monster Rancher 2", "Earthbound", "Dark Cloud", "Pokemon Crystal Version", "Borderlands 2", 
+                "Deadly Premonition", "Ratchet and Clank a Crack in Time", "The Elder Scrolls: Oblivion", "Phoenix Wright Ace Attorney: Justice for All"}; // create a string array
+
+
+            Console.WriteLine("Array title is \"Best Video Games\". Please enter some text to add to an item in the array.");
+            string userArrayText = Console.ReadLine();
+
+            for (int i = 0; i < bestVideoGames.Length; i++)
             {
-                Console.WriteLine(stringArray[stringSelection]); // it will print from the array 
-            }
-            else // otherwise
-            {
-                Console.WriteLine(stringSelection + " is not a valid selection."); // it tells the user it isn't a valid selection. 
-            }
-
-            //creating the int array
-
-            int[] intArray = { 5, 10, 15, 20, 25 , 30, 35 }; // create an int array 
-
-            Console.WriteLine("Please select an index number from the integer array starting with 0 and ending with 6"); // ask the user to make a selection
-            int intSelection = Convert.ToInt32(Console.ReadLine()); // converts the selection from a string to an integer which allows it to be used in the print from the array
-
-            if (intSelection <= 6) // if the user selection is 6 or less
-            {
-                Console.WriteLine(intArray[intSelection]);  // it will print from the array 
-            }
-            else // otherwise
-            {
-                Console.WriteLine(intSelection + " is not a valid selection."); // it tells the user it isn't a valid selection. 
-            }
-
-            // creating the string list
-
-            List<string> stringList = new List<string>(); // creates a string list
-            stringList.Add("pizza");
-            stringList.Add("macaroni and cheese");
-            stringList.Add("nachos");
-            stringList.Add("grilled cheese");
-            stringList.Add("ramen");
-
-            Console.WriteLine("Please select an index number from the string list starting with 0 and ending with 4"); // ask the user to make a selection
-            int stringListSelection = Convert.ToInt32(Console.ReadLine());
-
-            if (stringListSelection <= 4) // if the user selection is 4 or less
-            {
-                Console.WriteLine(stringList[stringListSelection]);  // it will print from the list 
-            }
-            else // otherwise
-            {
-                Console.WriteLine(stringListSelection + " is not a valid selection."); // it tells the user it isn't a valid selection. 
+                Console.Write(bestVideoGames[i] + " " + userArrayText + "\n");
             }
 
             Console.ReadLine();
+
+            //while (true)  // 
+            //{
+            //    Console.WriteLine("Hello"); //// commented out the infinite loop
+            // }
+            //Console.ReadLine();
+
+            bool infiniteLoop = true;
+
+            while (infiniteLoop)  // 
+            {
+                Console.WriteLine("Hello"); // here is the infinite loop corrected to run once
+                infiniteLoop = false;
+            }
+
+            Console.WriteLine("\n"); // adds a blank line for readablility
+
+            for (int i = 0; i < 10; i++) // while i is less than 10
+            {
+                Console.WriteLine(i); // do this
+            }
+
+            Console.WriteLine("\n"); // adds a blank line for readablility
+
+                        for (int i = 0; i <= 10; i++) // while i is less than or equal to 10
+            {
+                Console.WriteLine(i); // do this
+            }
+
+          // list created with no duplicates
+
+            List<string> favoriteGames = new List<string>() {"Mass Effect 2", "Animal Crossing New Leaf", "Overwatch", "Monster Rancher 2", "Earthbound", "Dark Cloud", "Pokemon Crystal Version", "Borderlands 2",
+                "Deadly Premonition", "Ratchet and Clank a Crack in Time", "The Elder Scrolls: Oblivion", "Phoenix Wright Ace Attorney: Justice for All"};
+
+            Console.WriteLine("Please search my list of favorite video games to see if you find a match."); // ask the user to search for a game
+            string userGameSearch = Console.ReadLine(); // assign their search to userGameSearch
+            int index = favoriteGames.FindIndex(a => a.Contains(userGameSearch)); // If the search is found it will assign that games index # in the list to index
+            
+
+            foreach (string game in favoriteGames) // for each index in favoriteGames is referred to as game
+            {
+                if (favoriteGames.Contains(userGameSearch)) // if user search is equal to a game in the list
+                {
+                    Console.WriteLine(userGameSearch + " is one of my favorites too! The index number is " + index); // write this
+                    Console.ReadLine();
+                    if(favoriteGames.Contains(userGameSearch)) // Not sure if I used this one correctly- the intention is it will check if the favoriteGames list contains userGameSearch. And if it does, stop the code with a break.
+                    {
+                        break;
+                        }                    
+                }
+                else // otherwise
+                {
+                    Console.WriteLine("Sorry, " + userGameSearch + " is not on my list."); // write this
+                    break; // ends this code
+                }
+            
+            } //end foreach
+
+            Console.WriteLine("\n"); // adds a blank line for readablility
+
+            //list with duplicates 
+
+            List<string> housePets = new List<string>() {"Deku","Jazz","Sweet Pea","Leo","Trixie","Deku"};  //Deku is in here twice
+
+                Console.WriteLine("I have 5 pets. Deku, Jazz, Trixie, Sweet Pea, and Leo. Please select one to search the list for."); // ask the user to search for a game
+                string petSearch = Console.ReadLine(); // assign their search to petSearch
+                int pets = housePets.FindIndex(a => a.Contains(petSearch)); // If the search is found it will assign that games index # in the list to index
+                
+
+                foreach (string pet in housePets) // for each index in favoriteGames is referred to as game
+                {
+                    if (housePets.Contains(petSearch)) // if user search is equal to a pet in the list
+                    {
+                        Console.WriteLine(petSearch + " " + pets); // write this //- when the list has duplicates it seems to stop at the first instance of finding "Deku"
+                        Console.ReadLine();
+                        break;
+                    }
+                    else // otherwise
+                    {
+                        Console.WriteLine("Sorry, " + petSearch + " is not one of my pets"); // write this
+                        break;
+                    }
+
+                }// end foreach
+
+            Console.WriteLine("\n"); // adds a blank line for readablility
+
+            // string list with duplicate search for dups
+
+            List<string> dinnerChoices = new List<string>() { "Tacos", "Ramen", "Breakfast for Dinner", "Soup and Salad", "Spaghetti", "Spaghetti" };  //Deku is in here twice
+            var dinner = dinnerChoices.GroupBy(i => i);
+            foreach (var food in dinner)
+            {
+                Console.WriteLine("{0} {1}", food.Key, food.Count()); // counts the number of times this item is on the list. Since Spaghetti is on there twice the count will return 2 to indicate a duplicate
+            }
+
+            Console.ReadLine();
+                
+            
         }
     }
 }
