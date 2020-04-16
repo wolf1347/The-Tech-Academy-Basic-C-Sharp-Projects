@@ -222,120 +222,152 @@ namespace Assignments
 
             //Console.ReadLine();
 
-            //************ assignment page 142************//
+            ////************ assignment page 142 COMMENTED OUT************//
 
-            string[] bestVideoGames = { "Mass Effect 2", "Animal Crossing New Leaf", "Overwatch", "Monster Rancher 2", "Earthbound", "Dark Cloud", "Pokemon Crystal Version", "Borderlands 2", 
-                "Deadly Premonition", "Ratchet and Clank a Crack in Time", "The Elder Scrolls: Oblivion", "Phoenix Wright Ace Attorney: Justice for All"}; // create a string array
+            //  string[] bestVideoGames = { "Mass Effect 2", "Animal Crossing New Leaf", "Overwatch", "Monster Rancher 2", "Earthbound", "Dark Cloud", "Pokemon Crystal Version", "Borderlands 2", 
+            //      "Deadly Premonition", "Ratchet and Clank a Crack in Time", "The Elder Scrolls: Oblivion", "Phoenix Wright Ace Attorney: Justice for All"}; // create a string array
 
 
-            Console.WriteLine("Array title is \"Best Video Games\". Please enter some text to add to an item in the array.");
-            string userArrayText = Console.ReadLine();
+            //  Console.WriteLine("Array title is \"Best Video Games\". Please enter some text to add to an item in the array.");
+            //  string userArrayText = Console.ReadLine();
 
-            for (int i = 0; i < bestVideoGames.Length; i++)
+            //  for (int i = 0; i < bestVideoGames.Length; i++)
+            //  {
+            //      Console.Write(bestVideoGames[i] + " " + userArrayText + "\n");
+            //  }
+
+            //  Console.ReadLine();
+
+            //  //while (true)  // 
+            //  //{
+            //  //    Console.WriteLine("Hello"); //// commented out the infinite loop
+            //  // }
+            //  //Console.ReadLine();
+
+            //  bool infiniteLoop = true;
+
+            //  while (infiniteLoop)  // 
+            //  {
+            //      Console.WriteLine("Hello"); // here is the infinite loop corrected to run once
+            //      infiniteLoop = false;
+            //  }
+
+            //  Console.WriteLine("\n"); // adds a blank line for readablility
+
+            //  for (int i = 0; i < 10; i++) // while i is less than 10
+            //  {
+            //      Console.WriteLine(i); // do this
+            //  }
+
+            //  Console.WriteLine("\n"); // adds a blank line for readablility
+
+            //              for (int i = 0; i <= 10; i++) // while i is less than or equal to 10
+            //  {
+            //      Console.WriteLine(i); // do this
+            //  }
+
+            //// list created with no duplicates
+
+            //  List<string> favoriteGames = new List<string>() {"Mass Effect 2", "Animal Crossing New Leaf", "Overwatch", "Monster Rancher 2", "Earthbound", "Dark Cloud", "Pokemon Crystal Version", "Borderlands 2",
+            //      "Deadly Premonition", "Ratchet and Clank a Crack in Time", "The Elder Scrolls: Oblivion", "Phoenix Wright Ace Attorney: Justice for All"};
+
+            //  Console.WriteLine("Please search my list of favorite video games to see if you find a match."); // ask the user to search for a game
+            //  string userGameSearch = Console.ReadLine(); // assign their search to userGameSearch
+            //  int index = favoriteGames.FindIndex(a => a.Contains(userGameSearch)); // If the search is found it will assign that games index # in the list to index
+
+
+            //  foreach (string game in favoriteGames) // for each index in favoriteGames is referred to as game
+            //  {
+            //      if (favoriteGames.Contains(userGameSearch)) // if user search is equal to a game in the list
+            //      {
+            //          Console.WriteLine(userGameSearch + " is one of my favorites too! The index number is " + index); // write this
+            //          Console.ReadLine();
+            //          if(favoriteGames.Contains(userGameSearch)) // Not sure if I used this one correctly- the intention is it will check if the favoriteGames list contains userGameSearch. And if it does, stop the code with a break.
+            //          {
+            //              break;
+            //              }                    
+            //      }
+            //      else // otherwise
+            //      {
+            //          Console.WriteLine("Sorry, " + userGameSearch + " is not on my list."); // write this
+            //          break; // ends this code
+            //      }
+
+            //  } //end foreach
+
+            //  Console.WriteLine("\n"); // adds a blank line for readablility
+
+            //  //list with duplicates 
+
+            //  List<string> housePets = new List<string>() {"Deku","Jazz","Sweet Pea","Leo","Trixie","Deku"};  //Deku is in here twice
+
+            //      Console.WriteLine("I have 5 pets. Deku, Jazz, Trixie, Sweet Pea, and Leo. Please select one to search the list for."); // ask the user to search for a game
+            //      string petSearch = Console.ReadLine(); // assign their search to petSearch
+            //      int pets = housePets.FindIndex(a => a.Contains(petSearch)); // If the search is found it will assign that games index # in the list to index
+
+
+            //      foreach (string pet in housePets) // for each index in favoriteGames is referred to as game
+            //      {
+            //          if (housePets.Contains(petSearch)) // if user search is equal to a pet in the list
+            //          {
+            //              Console.WriteLine(petSearch + " " + pets); // write this //- when the list has duplicates it seems to stop at the first instance of finding "Deku"
+            //              Console.ReadLine();
+            //              break;
+            //          }
+            //          else // otherwise
+            //          {
+            //              Console.WriteLine("Sorry, " + petSearch + " is not one of my pets"); // write this
+            //              break;
+            //          }
+
+            //      }// end foreach
+
+            //  Console.WriteLine("\n"); // adds a blank line for readablility
+
+            //  // string list with duplicate search for dups
+
+            //  List<string> dinnerChoices = new List<string>() { "Tacos", "Ramen", "Breakfast for Dinner", "Soup and Salad", "Spaghetti", "Spaghetti" };  //Deku is in here twice
+            //  var dinner = dinnerChoices.GroupBy(i => i);
+            //  foreach (var food in dinner)
+            //  {
+            //      Console.WriteLine("{0} {1}", food.Key, food.Count()); // counts the number of times this item is on the list. Since Spaghetti is on there twice the count will return 2 to indicate a duplicate
+            //  }
+
+            //  Console.ReadLine();
+
+            //************ assignment page 147************//
+
+            List<int> divideNumbers = new List<int>() {75, 100, 250, 425}; // intinger list
+
+           
+            try // try to do the foreEach
             {
-                Console.Write(bestVideoGames[i] + " " + userArrayText + "\n");
-            }
+                Console.WriteLine("Please enter a number to divide by a number on our list. The resulting number will be rounded"); // asks the user for a number
+                int userNumber = Convert.ToInt32(Console.ReadLine()); // converts the user input to a int so it can be used in a math equation.
 
-            Console.ReadLine();
-
-            //while (true)  // 
-            //{
-            //    Console.WriteLine("Hello"); //// commented out the infinite loop
-            // }
-            //Console.ReadLine();
-
-            bool infiniteLoop = true;
-
-            while (infiniteLoop)  // 
-            {
-                Console.WriteLine("Hello"); // here is the infinite loop corrected to run once
-                infiniteLoop = false;
-            }
-
-            Console.WriteLine("\n"); // adds a blank line for readablility
-
-            for (int i = 0; i < 10; i++) // while i is less than 10
-            {
-                Console.WriteLine(i); // do this
-            }
-
-            Console.WriteLine("\n"); // adds a blank line for readablility
-
-                        for (int i = 0; i <= 10; i++) // while i is less than or equal to 10
-            {
-                Console.WriteLine(i); // do this
-            }
-
-          // list created with no duplicates
-
-            List<string> favoriteGames = new List<string>() {"Mass Effect 2", "Animal Crossing New Leaf", "Overwatch", "Monster Rancher 2", "Earthbound", "Dark Cloud", "Pokemon Crystal Version", "Borderlands 2",
-                "Deadly Premonition", "Ratchet and Clank a Crack in Time", "The Elder Scrolls: Oblivion", "Phoenix Wright Ace Attorney: Justice for All"};
-
-            Console.WriteLine("Please search my list of favorite video games to see if you find a match."); // ask the user to search for a game
-            string userGameSearch = Console.ReadLine(); // assign their search to userGameSearch
-            int index = favoriteGames.FindIndex(a => a.Contains(userGameSearch)); // If the search is found it will assign that games index # in the list to index
-            
-
-            foreach (string game in favoriteGames) // for each index in favoriteGames is referred to as game
-            {
-                if (favoriteGames.Contains(userGameSearch)) // if user search is equal to a game in the list
+                foreach (int number in divideNumbers) // will loop through the list
                 {
-                    Console.WriteLine(userGameSearch + " is one of my favorites too! The index number is " + index); // write this
-                    Console.ReadLine();
-                    if(favoriteGames.Contains(userGameSearch)) // Not sure if I used this one correctly- the intention is it will check if the favoriteGames list contains userGameSearch. And if it does, stop the code with a break.
-                    {
-                        break;
-                        }                    
+                    int dividedNumber = number / userNumber; // divide the number on the list to the user's entered number and assigns it in divideNumber
+                    Console.WriteLine(number + " divided by " + userNumber + " is equal to " + dividedNumber); // prints this message to the screen to show the result
                 }
-                else // otherwise
-                {
-                    Console.WriteLine("Sorry, " + userGameSearch + " is not on my list."); // write this
-                    break; // ends this code
-                }
-            
-            } //end foreach
-
-            Console.WriteLine("\n"); // adds a blank line for readablility
-
-            //list with duplicates 
-
-            List<string> housePets = new List<string>() {"Deku","Jazz","Sweet Pea","Leo","Trixie","Deku"};  //Deku is in here twice
-
-                Console.WriteLine("I have 5 pets. Deku, Jazz, Trixie, Sweet Pea, and Leo. Please select one to search the list for."); // ask the user to search for a game
-                string petSearch = Console.ReadLine(); // assign their search to petSearch
-                int pets = housePets.FindIndex(a => a.Contains(petSearch)); // If the search is found it will assign that games index # in the list to index
-                
-
-                foreach (string pet in housePets) // for each index in favoriteGames is referred to as game
-                {
-                    if (housePets.Contains(petSearch)) // if user search is equal to a pet in the list
-                    {
-                        Console.WriteLine(petSearch + " " + pets); // write this //- when the list has duplicates it seems to stop at the first instance of finding "Deku"
-                        Console.ReadLine();
-                        break;
-                    }
-                    else // otherwise
-                    {
-                        Console.WriteLine("Sorry, " + petSearch + " is not one of my pets"); // write this
-                        break;
-                    }
-
-                }// end foreach
-
-            Console.WriteLine("\n"); // adds a blank line for readablility
-
-            // string list with duplicate search for dups
-
-            List<string> dinnerChoices = new List<string>() { "Tacos", "Ramen", "Breakfast for Dinner", "Soup and Salad", "Spaghetti", "Spaghetti" };  //Deku is in here twice
-            var dinner = dinnerChoices.GroupBy(i => i);
-            foreach (var food in dinner)
-            {
-                Console.WriteLine("{0} {1}", food.Key, food.Count()); // counts the number of times this item is on the list. Since Spaghetti is on there twice the count will return 2 to indicate a duplicate
             }
-
-            Console.ReadLine();
-                
-            
+            catch (FormatException) // if there is a format exception
+            {
+                Console.WriteLine("Please enter a number. Cannot divide a number by a string.\n"); // print this message
+            }
+            catch (DivideByZeroException) // if there is a divide by zero exception
+            {
+                Console.WriteLine("Unable to divide by zero"); // print this message to the screen
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message); // otherwise print the standard generic message
+            }
+            finally // ensures this will always run
+            {
+                Console.WriteLine("\nIf you can see this that means the finally has been hit after they try catch"); //write a message to show this still hits even after an exception in the try catch
+                Console.ReadLine(); // ensures the Console.ReadLine is always hit
+            }
         }
     }
 }
