@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5DA6F434-EA97-4B4C-BB1B-A62695A39D72}</ProjectGuid>
+    <ProjectGuid>{D6286212-3534-4AC3-8A26-B96EA89A1F05}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Assignments</RootNamespace>
-    <AssemblyName>Assignments</AssemblyName>
+    <RootNamespace>ClassesAndObjects</RootNamespace>
+    <AssemblyName>ClassesAndObjects</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Card.cs" />
+    <Compile Include="Deck.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
