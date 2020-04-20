@@ -435,34 +435,45 @@ namespace Assignments
             //Console.WriteLine(userNumberE + " * " + userNumberF + " is equal to " + stringResults); // prints the results
             //Console.ReadLine();
 
-            //************ assignment page 160  ************//
+            ////************ assignment page 160  COMMENTED OUT************//
 
-            Optional optional = new Optional(); 
+            //Optional optional = new Optional(); 
 
-            Console.WriteLine("Please enter a number"); 
-            int userA = Int32.Parse(Console.ReadLine()); 
-            int? userB = null; // declares userB but with no value
+            //Console.WriteLine("Please enter a number"); 
+            //int userA = Int32.Parse(Console.ReadLine()); 
+            //int? userB = null; // declares userB but with no value
 
-            if (!userB.HasValue) // if userB is null it will do the below
-            {
-                Console.WriteLine("Please enter a second number. This number is optional. If you don't want to enter a number hit enter to continue and the equation will detault to 0"); // ask for a second number
-                userB = int.TryParse(Console.ReadLine(), out int i) ? i : new int?(); // user input to update userB
-                if (userB >= 0) // if the entered amount is equal to or greater than 0
-                {
-                    int optionalResult = optional.optionalMath(userA, userB); // it will call on the optionalMath class with the Optional function
-                    Console.WriteLine(userA + " + " + userB + " is equal to " + optionalResult); // and write the equation to the line
-                    Console.ReadLine();
-                }
-                else {
-                    int optionalResult = optional.optionalMath(userA); // otherwise if it is not equal to or greater than 0 it will only pass through the userA and not userB. The class gives userB a default of 0 which 
-                    //will be used instead.
-                    Console.WriteLine(userA + " + " + " 0 " + " is equal to " + optionalResult); // writes this to the console
-                    Console.ReadLine();
-                }
-            }
-            
+            //if (!userB.HasValue) // if userB is null it will do the below
+            //{
+            //    Console.WriteLine("Please enter a second number. This number is optional. If you don't want to enter a number hit enter to continue and the equation will detault to 0"); // ask for a second number
+            //    userB = int.TryParse(Console.ReadLine(), out int i) ? i : new int?(); // user input to update userB
+            //    if (userB >= 0) // if the entered amount is equal to or greater than 0
+            //    {
+            //        int optionalResult = optional.optionalMath(userA, userB); // it will call on the optionalMath class with the Optional function
+            //        Console.WriteLine(userA + " + " + userB + " is equal to " + optionalResult); // and write the equation to the line
+            //        Console.ReadLine();
+            //    }
+            //    else {
+            //        int optionalResult = optional.optionalMath(userA); // otherwise if it is not equal to or greater than 0 it will only pass through the userA and not userB. The class gives userB a default of 0 which 
+            //        //will be used instead.
+            //        Console.WriteLine(userA + " + " + " 0 " + " is equal to " + optionalResult); // writes this to the console
+            //        Console.ReadLine();
+            //    }
+            //}
 
-                      
+            //************ assignment page 161 ************//
+
+            VoidClass VoidClass = new VoidClass(); // calls on MoreMath which can be called on by moreMathFunctions
+
+            Console.WriteLine( "Please enter a number"); // ask the user for a number
+            int voidNumber1 = Convert.ToInt32(Console.ReadLine()); // store that number
+            Console.WriteLine("Please enter a second number"); // ask for a second number
+            int voidNumber2 = Convert.ToInt32(Console.ReadLine()); // store that number
+
+            VoidClass.returnNothing(voidNumber1, voidNumber2);
+
+            Console.ReadLine();
+
         }
     }
 }
