@@ -404,38 +404,65 @@ namespace Assignments
             //Console.WriteLine(userNumber5 + " * " + userNumber6 + " is equal to " + multiplyResults); // prints the results
             //Console.ReadLine();
 
-            //************ assignment page 158************//
+            ////************ assignment page 159 COMMENTED OUT************//
 
-            MoreMath moreMathFunctions = new MoreMath(); // calls on MoreMath which can be called on by moreMathFunctions
+            //MoreMath moreMathFunctions = new MoreMath(); // calls on MoreMath which can be called on by moreMathFunctions
 
-            Console.WriteLine("Please enter a number"); // ask the user for a number
-            int userNumberA = Convert.ToInt32(Console.ReadLine()); // store that number
-            Console.WriteLine("Please enter a second number"); // ask for a second number
-            int userNumberB = Convert.ToInt32(Console.ReadLine()); // store that number
+            //Console.WriteLine("Please enter a number"); // ask the user for a number
+            //int userNumberA = Convert.ToInt32(Console.ReadLine()); // store that number
+            //Console.WriteLine("Please enter a second number"); // ask for a second number
+            //int userNumberB = Convert.ToInt32(Console.ReadLine()); // store that number
 
-            int divisionResult = moreMathFunctions.equation(userNumberA, userNumberB); // calls on the equation function in MoreMath passing through userNumberA and B
-            Console.WriteLine(userNumberA + " + " + userNumberB + " is equal to " + divisionResult); // prints the results
-            Console.ReadLine();
+            //int divisionResult = moreMathFunctions.equation(userNumberA, userNumberB); // calls on the equation function in MoreMath passing through userNumberA and B
+            //Console.WriteLine(userNumberA + " + " + userNumberB + " is equal to " + divisionResult); // prints the results
+            //Console.ReadLine();
 
-            Console.WriteLine("Please enter a number"); // ask the user for a number
-            double userNumberC = Convert.ToDouble(Console.ReadLine()); // store that number
-            Console.WriteLine("Please enter a second number"); // ask for a second number
-            double userNumberD = Convert.ToDouble(Console.ReadLine()); // store that number
+            //Console.WriteLine("Please enter a number"); // ask the user for a number
+            //double userNumberC = Convert.ToDouble(Console.ReadLine()); // store that number
+            //Console.WriteLine("Please enter a second number"); // ask for a second number
+            //double userNumberD = Convert.ToDouble(Console.ReadLine()); // store that number
 
-            double decimalDivisionResult = moreMathFunctions.equation(userNumberC, userNumberD); // calls on the equation function in MoreMath passing through userNumberC and D
-            Console.WriteLine(userNumberC + " / " + userNumberD + " is equal to " + decimalDivisionResult); // prints the results
-            Console.ReadLine();
+            //double decimalDivisionResult = moreMathFunctions.equation(userNumberC, userNumberD); // calls on the equation function in MoreMath passing through userNumberC and D
+            //Console.WriteLine(userNumberC + " / " + userNumberD + " is equal to " + decimalDivisionResult); // prints the results
+            //Console.ReadLine();
 
-            Console.WriteLine("Please enter a number"); // ask the user for a number
-            string userNumberE = Console.ReadLine(); // store that string- conversion will be done in the function
-            Console.WriteLine("Please enter a second number"); // ask for a second number
-            string userNumberF = Console.ReadLine(); // store that string-conversion will be done in the function
+            //Console.WriteLine("Please enter a number"); // ask the user for a number
+            //string userNumberE = Console.ReadLine(); // store that string- conversion will be done in the function
+            //Console.WriteLine("Please enter a second number"); // ask for a second number
+            //string userNumberF = Console.ReadLine(); // store that string-conversion will be done in the function
 
-            int stringResults = moreMathFunctions.equation(userNumberE, userNumberF); // calls on the equation function in MoreMath passing through userNumberE and F
-            Console.WriteLine(userNumberE + " * " + userNumberF + " is equal to " + stringResults); // prints the results
-            Console.ReadLine();
+            //int stringResults = moreMathFunctions.equation(userNumberE, userNumberF); // calls on the equation function in MoreMath passing through userNumberE and F
+            //Console.WriteLine(userNumberE + " * " + userNumberF + " is equal to " + stringResults); // prints the results
+            //Console.ReadLine();
 
+            //************ assignment page 160  ************//
 
+            Optional optional = new Optional(); 
+
+            Console.WriteLine("Please enter a number"); 
+            int userA = Int32.Parse(Console.ReadLine()); 
+            int? userB = null; // declares userB but with no value
+
+            if (!userB.HasValue) // if userB is null it will do the below
+            {
+                Console.WriteLine("Please enter a second number. This number is optional. If you don't want to enter a number hit enter to continue and the equation will detault to 0"); // ask for a second number
+                userB = int.TryParse(Console.ReadLine(), out int i) ? i : new int?(); // user input to update userB
+                if (userB >= 0) // if the entered amount is equal to or greater than 0
+                {
+                    int optionalResult = optional.optionalMath(userA, userB); // it will call on the optionalMath class with the Optional function
+                    Console.WriteLine(userA + " + " + userB + " is equal to " + optionalResult); // and write the equation to the line
+                    Console.ReadLine();
+                }
+                else {
+                    int optionalResult = optional.optionalMath(userA); // otherwise if it is not equal to or greater than 0 it will only pass through the userA and not userB. The class gives userB a default of 0 which 
+                    //will be used instead.
+                    Console.WriteLine(userA + " + " + " 0 " + " is equal to " + optionalResult); // writes this to the console
+                    Console.ReadLine();
+                }
+            }
+            
+
+                      
         }
     }
 }
