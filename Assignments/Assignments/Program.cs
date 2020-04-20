@@ -369,40 +369,73 @@ namespace Assignments
             //    Console.ReadLine(); // ensures the Console.ReadLine is always hit
             //}
 
-            //************ assignment page 156************//
+            ////************ assignment page 156 COMMENTED OUT************//
 
-            Math mathFunctions = new Math(); // calls on Math which can be called on by mathFunctions
+            //Math mathFunctions = new Math(); // calls on Math which can be called on by mathFunctions
+
+            //Console.WriteLine("Please enter a number"); // ask the user for a number
+            //int userNumber1 = Convert.ToInt32(Console.ReadLine()); // store that number
+            //Console.WriteLine("Please enter a second number"); // ask for a second number
+            //int userNumber2 = Convert.ToInt32(Console.ReadLine()); // store that number
+
+
+            //int additionResult = mathFunctions.addition(userNumber1, userNumber2); // calls on the addition function in math
+            //Console.WriteLine(userNumber1 + " + " + userNumber2 + " is equal to " + additionResult); // prints the results
+            //Console.ReadLine();
+
+
+            //Console.WriteLine("Please enter a number");
+            //int userNumber3 = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Please enter a second number");
+            //int userNumber4 = Convert.ToInt32(Console.ReadLine());
+
+
+            //int subtractionResult = mathFunctions.subtraction(userNumber3, userNumber4); // calls on the subtraction function in math
+            //Console.WriteLine(userNumber3 + " - " + userNumber4 + " is equal to " + subtractionResult); // prints the results
+            //Console.ReadLine();
+
+            //Console.WriteLine("Please enter a number");
+            //int userNumber5 = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Please enter a second number");
+            //int userNumber6 = Convert.ToInt32(Console.ReadLine());
+
+
+            //int multiplyResults = mathFunctions.multiplication(userNumber5, userNumber6); // calls on the multiplication function in math
+            //Console.WriteLine(userNumber5 + " * " + userNumber6 + " is equal to " + multiplyResults); // prints the results
+            //Console.ReadLine();
+
+            //************ assignment page 158************//
+
+            MoreMath moreMathFunctions = new MoreMath(); // calls on MoreMath which can be called on by moreMathFunctions
 
             Console.WriteLine("Please enter a number"); // ask the user for a number
-            int userNumber1 = Convert.ToInt32(Console.ReadLine()); // store that number
+            int userNumberA = Convert.ToInt32(Console.ReadLine()); // store that number
             Console.WriteLine("Please enter a second number"); // ask for a second number
-            int userNumber2 = Convert.ToInt32(Console.ReadLine()); // store that number
+            int userNumberB = Convert.ToInt32(Console.ReadLine()); // store that number
 
-            
-            int additionResult = mathFunctions.addition(userNumber1, userNumber2); // calls on the addition function in math
-            Console.WriteLine(userNumber1 + " + " + userNumber2 + " is equal to " + additionResult); // prints the results
+            int divisionResult = moreMathFunctions.equation(userNumberA, userNumberB); // calls on the equation function in MoreMath passing through userNumberA and B
+            Console.WriteLine(userNumberA + " + " + userNumberB + " is equal to " + divisionResult); // prints the results
+            Console.ReadLine();
+
+            Console.WriteLine("Please enter a number"); // ask the user for a number
+            double userNumberC = Convert.ToDouble(Console.ReadLine()); // store that number
+            Console.WriteLine("Please enter a second number"); // ask for a second number
+            double userNumberD = Convert.ToDouble(Console.ReadLine()); // store that number
+
+            double decimalDivisionResult = moreMathFunctions.equation(userNumberC, userNumberD); // calls on the equation function in MoreMath passing through userNumberC and D
+            Console.WriteLine(userNumberC + " / " + userNumberD + " is equal to " + decimalDivisionResult); // prints the results
+            Console.ReadLine();
+
+            Console.WriteLine("Please enter a number"); // ask the user for a number
+            string userNumberE = Console.ReadLine(); // store that string- conversion will be done in the function
+            Console.WriteLine("Please enter a second number"); // ask for a second number
+            string userNumberF = Console.ReadLine(); // store that string-conversion will be done in the function
+
+            int stringResults = moreMathFunctions.equation(userNumberE, userNumberF); // calls on the equation function in MoreMath passing through userNumberE and F
+            Console.WriteLine(userNumberE + " * " + userNumberF + " is equal to " + stringResults); // prints the results
             Console.ReadLine();
 
 
-            Console.WriteLine("Please enter a number");
-            int userNumber3 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Please enter a second number");
-            int userNumber4 = Convert.ToInt32(Console.ReadLine());
-
-
-            int subtractionResult = mathFunctions.subtraction(userNumber3, userNumber4); // calls on the subtraction function in math
-            Console.WriteLine(userNumber3 + " - " + userNumber4 + " is equal to " + subtractionResult); // prints the results
-            Console.ReadLine();
-
-            Console.WriteLine("Please enter a number");
-            int userNumber5 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Please enter a second number");
-            int userNumber6 = Convert.ToInt32(Console.ReadLine());
-
-
-            int multiplyResults = mathFunctions.multiplication(userNumber5, userNumber6); // calls on the multiplication function in math
-            Console.WriteLine(userNumber5 + " * " + userNumber6 + " is equal to " + multiplyResults); // prints the results
-            Console.ReadLine();
         }
     }
 }
