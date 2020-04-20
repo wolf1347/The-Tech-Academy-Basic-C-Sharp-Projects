@@ -8,7 +8,7 @@ namespace Assignments
 {
     class Program
     {
-        static void Main(string[] args)
+        static public void Main(string[] args)
         {
 
             ////************ assignment page 101 COMMENTED OUT ************//
@@ -461,19 +461,38 @@ namespace Assignments
             //    }
             //}
 
-            //************ assignment page 161 ************//
+            ////************ assignment page 161 ************//
 
-            VoidClass VoidClass = new VoidClass(); // calls on MoreMath which can be called on by moreMathFunctions
+            //VoidClass VoidClass = new VoidClass(); // calls on MoreMath which can be called on by moreMathFunctions
 
-            Console.WriteLine( "Please enter a number"); // ask the user for a number
-            int voidNumber1 = Convert.ToInt32(Console.ReadLine()); // store that number
-            Console.WriteLine("Please enter a second number"); // ask for a second number
-            int voidNumber2 = Convert.ToInt32(Console.ReadLine()); // store that number
+            //Console.WriteLine( "Please enter a number"); // ask the user for a number
+            //int voidNumber1 = Convert.ToInt32(Console.ReadLine()); // store that number
+            //Console.WriteLine("Please enter a second number"); // ask for a second number
+            //int voidNumber2 = Convert.ToInt32(Console.ReadLine()); // store that number
 
-            VoidClass.returnNothing(voidNumber1, voidNumber2);
+            //VoidClass.returnNothing(voidNumber1, voidNumber2);
+
+            //Console.ReadLine();
+
+            //************ assignment page 164 ************//
+
+            MathClass VoidDivide = new MathClass(); // calls on the MathClass assigned to VoidDivide
+            Console.WriteLine("Please enter a number"); // ask the user for a number
+            int num1 = Convert.ToInt32(Console.ReadLine()); // store that number
+
+
+            VoidDivide.divideByTwo(num1); // passes the number to the function which will return the result
+
+            MathClass.Numbers(out int firstNumber, out int secondNumber); 
+
+            Console.WriteLine("\n" +firstNumber + " and " + secondNumber); 
+
+            Console.WriteLine("\n" + "Multiplying the 2 selected numbers: " + MathClass.duplicateName(10, 15)); // passes the numbers to the function duplicateName. 
+            Console.WriteLine("\n" + "Adding the 3 selected numbers: " + MathClass.duplicateName(2, 5, 30)); // passes the numbers to the function duplicateName. This includes a third parameter so it knows which one to use 
 
             Console.ReadLine();
 
+            
         }
     }
 }
