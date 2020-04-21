@@ -474,25 +474,35 @@ namespace Assignments
 
             //Console.ReadLine();
 
+            ////************ assignment page 164 ************//
+
+            //MathClass VoidDivide = new MathClass(); // calls on the MathClass assigned to VoidDivide
+            //Console.WriteLine("Please enter a number"); // ask the user for a number
+            //int num1 = Convert.ToInt32(Console.ReadLine()); // store that number
+
+
+            //VoidDivide.divideByTwo(num1); // passes the number to the function which will return the result
+
+            //MathClass.Numbers(out int firstNumber, out int secondNumber); 
+
+            //Console.WriteLine("\n" +firstNumber + " and " + secondNumber); 
+
+            //Console.WriteLine("\n" + "Multiplying the 2 selected numbers: " + MathClass.duplicateName(10, 15)); // passes the numbers to the function duplicateName. 
+            //Console.WriteLine("\n" + "Adding the 3 selected numbers: " + MathClass.duplicateName(2, 5, 30)); // passes the numbers to the function duplicateName. This includes a third parameter so it knows which one to use 
+
+            //Console.ReadLine();
+
             //************ assignment page 164 ************//
 
-            MathClass VoidDivide = new MathClass(); // calls on the MathClass assigned to VoidDivide
-            Console.WriteLine("Please enter a number"); // ask the user for a number
-            int num1 = Convert.ToInt32(Console.ReadLine()); // store that number
+            Employee employee = new Employee(); // calls on the Employee class which will be referred to in this program as employee
 
+            employee.FirstName = "Sample"; // sets first name from the Employee class (inherited from Person) to Sample
+            employee.LastName = "Student"; // sets last name from the Employee class (inherited from Person) to Student
 
-            VoidDivide.divideByTwo(num1); // passes the number to the function which will return the result
-
-            MathClass.Numbers(out int firstNumber, out int secondNumber); 
-
-            Console.WriteLine("\n" +firstNumber + " and " + secondNumber); 
-
-            Console.WriteLine("\n" + "Multiplying the 2 selected numbers: " + MathClass.duplicateName(10, 15)); // passes the numbers to the function duplicateName. 
-            Console.WriteLine("\n" + "Adding the 3 selected numbers: " + MathClass.duplicateName(2, 5, 30)); // passes the numbers to the function duplicateName. This includes a third parameter so it knows which one to use 
-
+            employee.SayName(); // calls the SayName function from the Employee class which was inherited from Person
             Console.ReadLine();
 
-            
+      
         }
     }
 }
