@@ -29,25 +29,46 @@ namespace Assignments2
             //Console.ReadLine();
 
 
-            //********** Assignment Page 184**********//
+            ////********** Assignment Page 184 COMMENTED OUT**********//
 
-            var employee1 = new Employee {FirstName="Amber", LastName="Wolf", Id=01 }; // instantiate the Employee class in to employee1
-            var employee2 = new Employee {FirstName = "Deku", LastName = "Wolf", Id = 02 }; // instantiate the Employee class in to employee1
+            //var employee1 = new Employee {FirstName="Amber", LastName="Wolf", Id=01 }; // instantiate the Employee class in to employee1
+            //var employee2 = new Employee {FirstName = "Deku", LastName = "Wolf", Id = 02 }; // instantiate the Employee class in to employee1
 
-            List<Employee> employeeList = new List<Employee>() // initialize a list and add the new instances of Employee in to it
+            //List<Employee> employeeList = new List<Employee>() // initialize a list and add the new instances of Employee in to it
+            //{
+            //   employee1,
+            //   employee2
+            //};
+
+
+            //if (employee1 == employee2) // compare statement using the overload ==
+            //{
+
+            //}
+
+
+            //Console.ReadLine();
+
+            //********** Assignment Page 187**********//
+
+
+            GenericEmployee<string> employee = new GenericEmployee<string>(); // initialize the class as a string
+            GenericEmployee<int> employee2 = new GenericEmployee<int>(); // initialize the class as an intiger
+            employee.Things = "Deku"; // assings Things as Deku
+            employee2.Things = 1;// assings Things as 1
+
+            List<object> EmployeeList = new List<object>(); // creates a new object list that will be capable of storing multiple types of data
+            EmployeeList.Add(employee.Things); // adds the string value for Things to the List 
+            EmployeeList.Add(employee2.Things);// adds the int value for Things to the List 
+
+
+            for (int i = 0; i < EmployeeList.Count; i++) // iterates through the list
             {
-               employee1,
-               employee2
-            };
-
-
-            if (employee1 == employee2) // compare statement using the overload ==
-            {
-
+                Console.WriteLine(EmployeeList[i]); //writes it to the console
             }
-            
 
             Console.ReadLine();
+
         }
     }
 }
