@@ -49,41 +49,68 @@ namespace Assignments2
 
             //Console.ReadLine();
 
-            //********** Assignment Page 187**********//
+            ////********** Assignment Page 187 COMMENTED OUT**********//
 
-            //class GenericEmployee<T> // creates generic class
-            GenericEmployee<string> employee = new GenericEmployee<string>(); // initialize the class as a string
-            GenericEmployee <int> employee2 = new GenericEmployee<int>(); // initialize the class as an intiger
+            ////class GenericEmployee<T> // creates generic class
+            //GenericEmployee<string> employee = new GenericEmployee<string>(); // initialize the class as a string
+            //GenericEmployee <int> employee2 = new GenericEmployee<int>(); // initialize the class as an intiger
 
-            List<string> blah = new List<string>();
-            blah.Add("Deku");
-            blah.Add("Leo");
-            blah.Add("Trixie");
-            blah.Add("Jazz");
-            blah.Add("Sweet Pea");
+            //List<string> blah = new List<string>();
+            //blah.Add("Deku");
+            //blah.Add("Leo");
+            //blah.Add("Trixie");
+            //blah.Add("Jazz");
+            //blah.Add("Sweet Pea");
 
-            employee.Things = blah;
+            //employee.Things = blah;
 
-            List<int> blah2 = new List<int>();
-            blah2.Add(1);
-            blah2.Add(2);
-            blah2.Add(3);
-            blah2.Add(4);
-            blah2.Add(5);
+            //List<int> blah2 = new List<int>();
+            //blah2.Add(1);
+            //blah2.Add(2);
+            //blah2.Add(3);
+            //blah2.Add(4);
+            //blah2.Add(5);
 
-            employee2.Things = blah2;
+            //employee2.Things = blah2;
 
-            List<IEmployee> employeeList = new List<IEmployee>();
-            employeeList.Add(employee);
-            employeeList.Add(employee2);
+            //List<IEmployee> employeeList = new List<IEmployee>();
+            //employeeList.Add(employee);
+            //employeeList.Add(employee2);
 
-            foreach (IEmployee empl in employeeList)
+            //foreach (IEmployee empl in employeeList)
+            //{
+            //    empl.PrintList();
+            //}
+
+            //Console.ReadLine();
+
+            //********** Assignment Page 192 **********//
+
+            Console.WriteLine("Please enter a day of the week");
+            try
             {
-                empl.PrintList();
+                string dayEntered = Console.ReadLine();
+                bool doesMatch = false;
+                foreach (string d in Enum.GetNames(typeof(DayOfTheWeek)))
+                {
+                    if (dayEntered.Equals(d))
+                    {
+                        Console.WriteLine("Thank you for your input.");
+                        doesMatch = true;
+                    }
+                }
+                if (doesMatch != true)
+                {
+                    throw new FormatException("Please enter a valid day of the week."); 
+                }
             }
-
-            Console.ReadLine();
-
+            catch (FormatException ex)
+            {
+                Console.WriteLine("Error occured: " + ex.Message);
+            }
+            finally {
+                Console.ReadLine();
+            }
         }
     }
 }
