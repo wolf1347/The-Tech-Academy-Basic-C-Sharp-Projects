@@ -112,16 +112,65 @@ namespace Assignments2
             //    Console.ReadLine();
             //}
 
-            //********** Assignment Page 197 **********//
+            ////********** Assignment Page 197 **********//
 
-            Number number1 = new Number(); // initialize the Number struct in number1
-            Number number2 = number1; // reference the struct Number but instead of initializing a new Number it is set to number1
+            //Number number1 = new Number(); // initialize the Number struct in number1
+            //Number number2 = number1; // reference the struct Number but instead of initializing a new Number it is set to number1
 
-            number1.Amount = 5.5M; //Set the Amount for number1
-            number2.Amount = 3.5M; //Set the Amount number2
+            //number1.Amount = 5.5M; //Set the Amount for number1
+            //number2.Amount = 3.5M; //Set the Amount number2
 
-            Console.WriteLine(number1.Amount); //write to the console. This will be 5.5. Not influenced by number2 since it is a struct. If Number was a class instead of a Struct both outputs would be 3.5
-            Console.WriteLine(number2.Amount); //write to the console. This will be 3.5.
+            //Console.WriteLine(number1.Amount); //write to the console. This will be 5.5. Not influenced by number2 since it is a struct. If Number was a class instead of a Struct both outputs would be 3.5
+            //Console.WriteLine(number2.Amount); //write to the console. This will be 3.5.
+            //Console.ReadLine();
+
+            ////********** Assignment Page 202 **********//
+
+            Employee employee = new Employee(); // initialize Employee class
+            List<Employee> EmployeesList = new List<Employee>(); // create new Employee List
+            EmployeesList.Add(new Employee { FirstName = "Amber", LastName = "Wolf", Id = 01 }); // add a bunch of employees to the list
+            EmployeesList.Add(new Employee { FirstName = "Deku", LastName = "Dog", Id = 02 });
+            EmployeesList.Add(new Employee { FirstName = "Trixie", LastName = "Cat", Id = 03 });
+            EmployeesList.Add(new Employee { FirstName = "Leo", LastName = "Cat", Id = 04 });
+            EmployeesList.Add(new Employee { FirstName = "Jazz", LastName = "Cat", Id = 05 });
+            EmployeesList.Add(new Employee { FirstName = "Sweet Pea", LastName = "Cat", Id = 06 });
+            EmployeesList.Add(new Employee { FirstName = "Matthew", LastName = "Wells", Id = 07 });
+            EmployeesList.Add(new Employee { FirstName = "Joe", LastName = "Doesn't Exist", Id = 10 });
+            EmployeesList.Add(new Employee { FirstName = "Made Up", LastName = "Person", Id = 08 });
+            EmployeesList.Add(new Employee { FirstName = "Random", LastName = "Name", Id = 09 });
+            EmployeesList.Add(new Employee { FirstName = "Joe", LastName = "Two", Id = 11 });
+
+            int counter = 0; //counter for the for each loop
+
+            Console.WriteLine("\nPrinting all employees in the employee list\n");
+
+            List<Employee> JoeList = new List<Employee>(); //New list to store Joes
+
+            foreach (Employee empl in EmployeesList) // foreach loop to go through the employeelist
+            { 
+            Console.WriteLine(empl.FirstName + " " + empl.LastName + " " + empl.Id); //writes out all of the employees
+                if (empl.FirstName == "Joe") //if the first name is equal to Joe
+                {
+                    JoeList.Add(new Employee { FirstName = empl.FirstName, LastName = empl.LastName, Id= empl.Id }); //add to the new JoeList
+                }
+                counter++; //increase the counter
+            }
+
+            Console.WriteLine("\nPrinting all employees added to the list of Joe's \n");
+            foreach (Employee joe in JoeList) //iterate through the JoeList
+            {
+                Console.WriteLine(joe.FirstName + " " + joe.LastName + " " + joe.Id); //print to the console. This is to ensure that the foreach loop worked as intended and added both Joe's to the list
+            }
+                
+            Console.WriteLine("\nPrinting all employees added to the list of Joe's using LAMBDA\n");
+
+            List<Employee> LAMBDAJoe = EmployeesList.Where( name => name.FirstName == "Joe").ToList(); //creating a new list called LAMBDAJoe from Employee list where the FirstName is equal to Joe- add to the list
+            
+            foreach (Employee joe in LAMBDAJoe) // iterate through the LAMBDAJoe List
+            {
+                Console.WriteLine(joe.FirstName + " " + joe.LastName + " " + joe.Id); //Write to the console
+            }
+
             Console.ReadLine();
 
         }

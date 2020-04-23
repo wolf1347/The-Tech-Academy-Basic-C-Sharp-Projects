@@ -8,8 +8,10 @@ namespace Assignments2
 {
     public class Employee: Person, IQuittable // inherits from both Person (the parent class) and IQuittable (the interface)
     {
+
         public int Id { get; set; }
-        public List<string> Employees{ get; set; }
+        public List<Employee> Employees{ get; set; }
+
 
         public override void SayName() //creates the SayName function which is required of the Person parent class
         {
@@ -55,6 +57,7 @@ namespace Assignments2
                 return false;
             }
 
+            
         }
 
     }

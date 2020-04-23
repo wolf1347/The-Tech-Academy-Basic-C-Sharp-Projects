@@ -9,5 +9,6 @@ namespace Assignments2
     struct Number // change class to struct
     {
         public decimal Amount { get; set; } // amount set to decimal
+
     }
 }
