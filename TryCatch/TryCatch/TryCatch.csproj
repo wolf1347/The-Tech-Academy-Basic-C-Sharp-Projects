@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D1E3CA1C-6DE4-4A5D-8DD2-BDD18B724561}</ProjectGuid>
+    <ProjectGuid>{7B0ECCA6-5828-4C3D-ABA6-CD1956380F3C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Assignments2</RootNamespace>
-    <AssemblyName>Assignments2</AssemblyName>
+    <RootNamespace>TryCatch</RootNamespace>
+    <AssemblyName>TryCatch</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,13 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Days.cs" />
-    <Compile Include="Employee.cs" />
-    <Compile Include="GenericEmployee.cs" />
-    <Compile Include="IEmployee.cs" />
-    <Compile Include="IQuittable.cs" />
-    <Compile Include="Number.cs" />
-    <Compile Include="Person.cs" />
+    <Compile Include="CakeMaker.cs" />
+    <Compile Include="CakeTools.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -84,33 +84,46 @@ namespace Assignments2
 
             //Console.ReadLine();
 
-            //********** Assignment Page 192 **********//
+            //********** Assignment Page 192  COMMENTED OUT**********//
 
-            Console.WriteLine("Please enter a day of the week");
-            try
-            {
-                string dayEntered = Console.ReadLine();
-                bool doesMatch = false;
-                foreach (string d in Enum.GetNames(typeof(DayOfTheWeek)))
-                {
-                    if (dayEntered.Equals(d))
-                    {
-                        Console.WriteLine("Thank you for your input.");
-                        doesMatch = true;
-                    }
-                }
-                if (doesMatch != true)
-                {
-                    throw new FormatException("Please enter a valid day of the week."); 
-                }
-            }
-            catch (FormatException ex)
-            {
-                Console.WriteLine("Error occured: " + ex.Message);
-            }
-            finally {
-                Console.ReadLine();
-            }
+            //Console.WriteLine("Please enter a day of the week");
+            //try
+            //{
+            //    string dayEntered = Console.ReadLine();
+            //    bool doesMatch = false;
+            //    foreach (string d in Enum.GetNames(typeof(DayOfTheWeek)))
+            //    {
+            //        if (dayEntered.Equals(d))
+            //        {
+            //            Console.WriteLine("Thank you for your input.");
+            //            doesMatch = true;
+            //        }
+            //    }
+            //    if (doesMatch != true)
+            //    {
+            //        throw new FormatException("Please enter a valid day of the week."); 
+            //    }
+            //}
+            //catch (FormatException ex)
+            //{
+            //    Console.WriteLine("Error occured: " + ex.Message);
+            //}
+            //finally {
+            //    Console.ReadLine();
+            //}
+
+            //********** Assignment Page 197 **********//
+
+            Number number1 = new Number(); // initialize the Number struct in number1
+            Number number2 = number1; // reference the struct Number but instead of initializing a new Number it is set to number1
+
+            number1.Amount = 5.5M; //Set the Amount for number1
+            number2.Amount = 3.5M; //Set the Amount number2
+
+            Console.WriteLine(number1.Amount); //write to the console. This will be 5.5. Not influenced by number2 since it is a struct. If Number was a class instead of a Struct both outputs would be 3.5
+            Console.WriteLine(number2.Amount); //write to the console. This will be 3.5.
+            Console.ReadLine();
+
         }
     }
 }
