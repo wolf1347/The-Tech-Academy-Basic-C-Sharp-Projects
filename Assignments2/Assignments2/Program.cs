@@ -51,20 +51,35 @@ namespace Assignments2
 
             //********** Assignment Page 187**********//
 
-
+            //class GenericEmployee<T> // creates generic class
             GenericEmployee<string> employee = new GenericEmployee<string>(); // initialize the class as a string
-            GenericEmployee<int> employee2 = new GenericEmployee<int>(); // initialize the class as an intiger
-            employee.Things = "Deku"; // assings Things as Deku
-            employee2.Things = 1;// assings Things as 1
+            GenericEmployee <int> employee2 = new GenericEmployee<int>(); // initialize the class as an intiger
 
-            List<object> EmployeeList = new List<object>(); // creates a new object list that will be capable of storing multiple types of data
-            EmployeeList.Add(employee.Things); // adds the string value for Things to the List 
-            EmployeeList.Add(employee2.Things);// adds the int value for Things to the List 
+            List<string> blah = new List<string>();
+            blah.Add("Deku");
+            blah.Add("Leo");
+            blah.Add("Trixie");
+            blah.Add("Jazz");
+            blah.Add("Sweet Pea");
 
+            employee.Things = blah;
 
-            for (int i = 0; i < EmployeeList.Count; i++) // iterates through the list
+            List<int> blah2 = new List<int>();
+            blah2.Add(1);
+            blah2.Add(2);
+            blah2.Add(3);
+            blah2.Add(4);
+            blah2.Add(5);
+
+            employee2.Things = blah2;
+
+            List<IEmployee> employeeList = new List<IEmployee>();
+            employeeList.Add(employee);
+            employeeList.Add(employee2);
+
+            foreach (IEmployee empl in employeeList)
             {
-                Console.WriteLine(EmployeeList[i]); //writes it to the console
+                empl.PrintList();
             }
 
             Console.ReadLine();
