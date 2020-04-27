@@ -199,16 +199,19 @@ namespace Assignments2
 
             //********** Assignment Page 221 **********//
 
-            const string fName= "Amber"; // const string assigned to fName
+            const string fName = "Amber"; // const string assigned to fName
             var lName = "Wolf"; // var lName- don't declare that it is a string but when this variable is used it will be inferred that it is a string
 
             Console.WriteLine("My name is {0} {1}", fName, lName); //write to the console
-            
+
 
             const int age = 28; //const int assigned to age
             var year = 1; // var lName- don't declare that it is an int but when this variable is used it will be inferred that it is an int.
             int bdayAge = age + year; //even though year wasn't declared as an int it can still be added to the constant int age.
             Console.WriteLine("Right now I am {0} years old but turn {1} this year", age, bdayAge); //write to the console
+
+            Employee employee = new Employee("Test", "Name"); // in the Employee class the Employee has 3 variables that pass through- fname, lname, and Id. However, you can pass through just the fname and lname and the
+            // Id will be set to the default of 0
 
             Console.ReadLine();
         }

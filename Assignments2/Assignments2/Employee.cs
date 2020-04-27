@@ -8,6 +8,15 @@ namespace Assignments2
 {
     public class Employee: Person, IQuittable // inherits from both Person (the parent class) and IQuittable (the interface)
     {
+        public Employee(string fname, string lname) : this(fname, lname, 0)
+        { 
+        
+        }
+        public Employee(string fname, string lname, int Id)
+        {
+            
+        }
+
 
         public int Id { get; set; }
         public List<Employee> Employees{ get; set; }

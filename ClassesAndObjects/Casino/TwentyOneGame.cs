@@ -13,7 +13,7 @@ namespace Casino.TwentyOne
         {
             Dealer = new TwentyOneDealer();
             foreach (Player player in Players)
-            {
+            {   
                 player.Hand = new List<Card>();
                 player.Stay = false;
             }
@@ -22,11 +22,24 @@ namespace Casino.TwentyOne
             Dealer.Deck = new Deck();
             Dealer.Deck.Shuffle();
 
-            Console.WriteLine("Place your bet:");
-
+            
             foreach (Player player in Players)
             {
-                int bet = Convert.ToInt32(Console.ReadLine());
+                bool validAnswer = false;
+                int bet = 0;
+                while (!validAnswer)
+                {
+                    Console.WriteLine("Place your bet:");
+                    validAnswer = int.TryParse(Console.ReadLine(), out bet);
+                    if (!validAnswer)
+                    {
+                        Console.WriteLine("Please enter whole digits only. No decimals.");
+                    }
+                }
+                if (bet < 0)
+                {
+                    throw new Fraud();
+                }
                 bool successfullyBet = player.Bet(bet);
                 if (!successfullyBet)
                 {
