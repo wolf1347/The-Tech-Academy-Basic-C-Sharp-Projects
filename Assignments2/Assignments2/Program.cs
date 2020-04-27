@@ -174,17 +174,29 @@ namespace Assignments2
 
             //Console.ReadLine();
 
-            //********** Assignment Page 210 **********//
+            ////********** Assignment Page 210 **********//
 
-            Console.WriteLine("Please enter a number");
-            int userNumber = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Please enter a number"); //asks the user for a number
+            //int userNumber = Convert.ToInt32(Console.ReadLine()); // converts it to an int
 
-            using (StreamWriter file = new StreamWriter(@"C:\The-Tech-Academy-Basic-C-Sharp-Projects\log.txt", true))
-            {
-                file.WriteLine(userNumber);
-            }
-            Console.WriteLine("Thank you for entering a number. Your response has been logged.");
+            //using (StreamWriter file = new StreamWriter(@"C:\The-Tech-Academy-Basic-C-Sharp-Projects\log.txt", true)) //add the path to the file that is set to append
+            //{
+            //    file.WriteLine(userNumber); // writes the users number to the file
+            //}
+            //Console.WriteLine("Thank you for entering a number. Your response has been logged.");
+            //Console.ReadLine();
+
+            //********** Assignment Page 213 **********//
+
+            DateTime currentTime = DateTime.Now; // sets the variable currentTime to whatever the current date and time is
+            Console.WriteLine("It is currently: " + currentTime); // writes the current time to the console
+            Console.WriteLine("Please enter a number of hours to add to this time"); // asks the user for a number
+            int userNumber = Convert.ToInt32(Console.ReadLine()); // converts this to an int
+            TimeSpan addHours = new TimeSpan(userNumber, 0, 0); // creates a new timespan with the users entered number in hours
+            DateTime futureTime = currentTime.Add(addHours); // takes the current time variable and adds the timespan hours to it
+            Console.WriteLine("In {0} hours it will be {1}", userNumber, futureTime); // write to the console the users selection and the results from adding it to the current time
             Console.ReadLine();
+
         }
     }
 }
