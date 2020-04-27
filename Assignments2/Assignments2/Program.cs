@@ -186,17 +186,31 @@ namespace Assignments2
             //Console.WriteLine("Thank you for entering a number. Your response has been logged.");
             //Console.ReadLine();
 
-            //********** Assignment Page 213 **********//
+            ////********** Assignment Page 213  COMMENTED OUT**********//
 
-            DateTime currentTime = DateTime.Now; // sets the variable currentTime to whatever the current date and time is
-            Console.WriteLine("It is currently: " + currentTime); // writes the current time to the console
-            Console.WriteLine("Please enter a number of hours to add to this time"); // asks the user for a number
-            int userNumber = Convert.ToInt32(Console.ReadLine()); // converts this to an int
-            TimeSpan addHours = new TimeSpan(userNumber, 0, 0); // creates a new timespan with the users entered number in hours
-            DateTime futureTime = currentTime.Add(addHours); // takes the current time variable and adds the timespan hours to it
-            Console.WriteLine("In {0} hours it will be {1}", userNumber, futureTime); // write to the console the users selection and the results from adding it to the current time
+            //DateTime currentTime = DateTime.Now; // sets the variable currentTime to whatever the current date and time is
+            //Console.WriteLine("It is currently: " + currentTime); // writes the current time to the console
+            //Console.WriteLine("Please enter a number of hours to add to this time"); // asks the user for a number
+            //int userNumber = Convert.ToInt32(Console.ReadLine()); // converts this to an int
+            //TimeSpan addHours = new TimeSpan(userNumber, 0, 0); // creates a new timespan with the users entered number in hours
+            //DateTime futureTime = currentTime.Add(addHours); // takes the current time variable and adds the timespan hours to it
+            //Console.WriteLine("In {0} hours it will be {1}", userNumber, futureTime); // write to the console the users selection and the results from adding it to the current time
+            //Console.ReadLine();
+
+            //********** Assignment Page 221 **********//
+
+            const string fName= "Amber"; // const string assigned to fName
+            var lName = "Wolf"; // var lName- don't declare that it is a string but when this variable is used it will be inferred that it is a string
+
+            Console.WriteLine("My name is {0} {1}", fName, lName); //write to the console
+            
+
+            const int age = 28; //const int assigned to age
+            var year = 1; // var lName- don't declare that it is an int but when this variable is used it will be inferred that it is an int.
+            int bdayAge = age + year; //even though year wasn't declared as an int it can still be added to the constant int age.
+            Console.WriteLine("Right now I am {0} years old but turn {1} this year", age, bdayAge); //write to the console
+
             Console.ReadLine();
-
         }
     }
 }
