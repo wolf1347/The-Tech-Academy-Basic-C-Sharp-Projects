@@ -197,23 +197,56 @@ namespace Assignments2
             //Console.WriteLine("In {0} hours it will be {1}", userNumber, futureTime); // write to the console the users selection and the results from adding it to the current time
             //Console.ReadLine();
 
-            //********** Assignment Page 221 **********//
+            ////********** Assignment Page 221 COMMENTED OUT **********//
 
-            const string fName = "Amber"; // const string assigned to fName
-            var lName = "Wolf"; // var lName- don't declare that it is a string but when this variable is used it will be inferred that it is a string
+            //const string fName = "Amber"; // const string assigned to fName
+            //var lName = "Wolf"; // var lName- don't declare that it is a string but when this variable is used it will be inferred that it is a string
 
-            Console.WriteLine("My name is {0} {1}", fName, lName); //write to the console
+            //Console.WriteLine("My name is {0} {1}", fName, lName); //write to the console
 
 
-            const int age = 28; //const int assigned to age
-            var year = 1; // var lName- don't declare that it is an int but when this variable is used it will be inferred that it is an int.
-            int bdayAge = age + year; //even though year wasn't declared as an int it can still be added to the constant int age.
-            Console.WriteLine("Right now I am {0} years old but turn {1} this year", age, bdayAge); //write to the console
+            //const int age = 28; //const int assigned to age
+            //var year = 1; // var lName- don't declare that it is an int but when this variable is used it will be inferred that it is an int.
+            //int bdayAge = age + year; //even though year wasn't declared as an int it can still be added to the constant int age.
+            //Console.WriteLine("Right now I am {0} years old but turn {1} this year", age, bdayAge); //write to the console
 
-            Employee employee = new Employee("Test", "Name"); // in the Employee class the Employee has 3 variables that pass through- fname, lname, and Id. However, you can pass through just the fname and lname and the
-            // Id will be set to the default of 0
+            //Employee employee = new Employee("Test", "Name"); // in the Employee class the Employee has 3 variables that pass through- fname, lname, and Id. However, you can pass through just the fname and lname and the
+            //// Id will be set to the default of 0
+
+            //Console.ReadLine();
+
+            //********** Assignment Page 225 **********//
+
+            Console.WriteLine("How Old are you"); // ask the user their age
+            DateTime currentDate = DateTime.Now; // gets the current datetime and stores it in currentDate
+            int year = currentDate.Year; // from the currentDate store the year in int year
+            try
+            {
+                int userAge = Convert.ToInt32(Console.ReadLine()); // stores the users entry in to userAge as an int
+                if (userAge < 1) // if the user's age is less than 1
+                {
+                    throw new InvalidDataException(); // throw an invaliddataexception
+
+                }
+                else //otherwise
+                {
+                    int yearBorn = year - userAge; //subtract the users age from the current year 
+                    Console.WriteLine("Approx. year you were born in is: " + yearBorn);   //write to the console. Year is approx because exact year differs depending on when in the current year the person was born
+                    //and this calculation isn't that precise. 
+                }
+            }
+            catch (InvalidDataException) // define the exception that was thrown above if the userAge was less than 1 (which would include 0 and anything negative)
+            {
+                Console.WriteLine("That is not a valid age"); // write this the console.
+            }
+            catch (Exception) // otherwise, if the error recieved doesn't fall under the above thrown exception it will hit this one instead
+            {
+                Console.WriteLine("Sorry, something went wrong."); // write a generic error to the console.
+            }
 
             Console.ReadLine();
+
+
         }
     }
 }
