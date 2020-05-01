@@ -38,7 +38,7 @@ namespace Casino.TwentyOne
                 }
                 if (bet < 0)
                 {
-                    throw new Fraud();
+                    throw new Fraud("Due to suspicious activity your game has ended.");
                 }
                 bool successfullyBet = player.Bet(bet);
                 if (!successfullyBet)
