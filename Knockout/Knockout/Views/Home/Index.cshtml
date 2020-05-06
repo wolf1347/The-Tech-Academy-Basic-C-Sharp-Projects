@@ -1,0 +1,22 @@
+﻿<div class="card bg-light text-center"> 
+  <div class="card-body">
+    <div class="card-header bg-dark text-center text-light">Cat petting simulator</div>
+    <br />
+    <div data-bind="visible: viewCat"> <!-- when clicks are less than 8 you will be able to see the below orange cat image and text-->
+      <p>Before you is a cute orange cat. He looks like he wants to be pet. Click anywhere on the cat to pet him.</p>
+      <img src="~/Content/images/petcat.png" style="cursor: grab;" data-bind='click: registerClick, disable: hasClickedTooManyTimes'>
+    </div>
+    <div data-bind="visible: hasClickedTooManyTimes"> <!-- but when you click more than 8 times the viewCat will be hidden and instead you will see hasClickedTooManyTimes text and cat image-->
+      <p>The kitty lays down exposing his tummy. A trap.</p>
+      <img src="~/Content/images/catfinished.png">
+    </div>
+    <div data-bind="visible: viewCat"> <!-- When you have less than 8 clicks you will be able to see the pet counter-->
+      <div>You've pet the cat <span data-bind='text: numberOfClicks'>&nbsp</span> times</div>
+    </div>
+    <div data-bind='visible: hasClickedTooManyTimes'> <!-- Otherwise it will be hidden and instead the text will be replaced with the below option to reset clicks-->
+      The kitty is satisfied with the pets! Any more pets could be dangerous.
+      <br><br />
+      <button data-bind='click: resetClicks' type="button" class="btn btn-outline-danger">Reset</button>
+    </div>
+  </div>
+</div>
