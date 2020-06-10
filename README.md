@@ -22,3 +22,4 @@ All of my practice with C# and MVC
     * The player will be able to hit or stay
     * And then the "bank" of either the dealer or player will be updated with the winnings
     * It currently only supports a single player but is designed in a way that additional players could be added.
+    * Logs users information and hands dealt in a text file.
